@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=div, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="tooltip.css">
+	<style>
+		.container {
+			width: 100%;
+			height: 100vh;
+		}
+
+		.btn {
+			padding: 10px;
+			background: #0645ff;
+			border: none;
+			color: #fff;
+			margin-left: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container" id="container">
+		<button class="btn btn-tooltip" data-tip="kamlesh">kamlesh</button>
+		<button class="btn btn-tooltip">kamlesh</button>
+		<button class="btn btn-tooltip"
+			data-tip="lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+			data-position="bottom">kamlesh1</button>
+		<button class="btn btn-tooltip" data-tip="kamlesh2">kamlesh2</button>
+	</div>
+	<script src='./tooltip.js'></script>
+	<script>
+		tooltip.initialize({ target: 'btn-tooltip', trigger: 'hover', position: 'right' });
+	</script>
+</body>
+
+</html>
