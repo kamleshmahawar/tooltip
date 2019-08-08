@@ -1,0 +1,45 @@
+.tooltip {
+    padding: 5px;
+    position: absolute;
+    padding: 10px;
+    max-width: 200px;
+    visibility: hidden;
+    z-index: 10000;
+    color: #fff;
+    background: #000;
+    border-radius: 5px;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    z-index: 10000;
+    width: 10px;
+    height: 10px;
+    background: #000;
+
+}
+
+.tooltip.up-arrow::after {
+    top: -5px;
+    left: 44%;
+    transform: rotate(45deg);
+}
+
+.tooltip.down-arrow::after {
+    bottom: -5px;
+    left: 44%;
+    transform: rotate(225deg);
+}
+
+.tooltip.right-arrow::after {
+    top: 45%;
+    right: -5px;
+    transform: rotate(135deg);
+}
+
+.tooltip.left-arrow::after {
+    top: 45%;
+    left: -5px;
+    transform: rotate(-45deg);
+}
