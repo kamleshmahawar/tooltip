@@ -10,7 +10,14 @@ var tooltip = (function () {
     tooltip.innerHTML = option.content;
 
     function initialize(options) {
-        option = {...option, ...options };
+		if(options) {
+			option = {
+				target: options.target || option.target,
+				content: options.content || option.content,
+				position: options.position || option.position,
+				trigger: options.trigger || option.trigger
+			}
+		}
         btn = document.getElementsByClassName(option.target);
         const event = option.trigger === 'hover' ? 'mouseover': option.trigger;
         for (let i = 0; i < btn.length; i++) {
@@ -59,6 +66,6 @@ var tooltip = (function () {
         }
     }
     return {
-        initialize,
+        initialize: initialize,
     }
 })();
